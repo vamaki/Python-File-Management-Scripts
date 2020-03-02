@@ -3,6 +3,7 @@ from os import listdir, rename
 from os.path import isfile, join
 
 def main(directory, name, filetype):
+
     #Gets the files in the directory, doesn't include other directories
     files = [f for f in listdir(directory) if isfile(join(directory, f))]
 
@@ -10,6 +11,9 @@ def main(directory, name, filetype):
         print("Directory is empty or contains only other directories")
 
     else:
+        #If the given directory doesn't end with a '/', add it to the end so that the file paths work
+        if not directory.endswith('/'):
+            directory = directory + '/'
         i = 0
         print("Renaming the following files:\n")
         for filename in files:
