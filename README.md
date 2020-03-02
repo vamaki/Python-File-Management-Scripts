@@ -1,7 +1,7 @@
 # Python File Management Scripts
 Scripts for (Ubuntu) file management
 
-bulk_rename.py: Renames all of the files within a given folder to a given name plus an index starting from 0.
+bulk_rename.py: Renames all of the files within a given folder to a given name plus an index starting from 0. Ignores files starting with a . ,for example .gitignore will not be renamed.
 
 Run from the command line in the folder the python file is with python bulk_rename.py with the following tags:
 
